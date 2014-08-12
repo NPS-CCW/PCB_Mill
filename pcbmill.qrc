@@ -1,0 +1,10 @@
+<RCC>
+  <qresource>
+    <file>images/finish1.jpg</file>
+    <file>images/PCBmill.jpg</file>
+    <file>images/drill.gif</file>
+    <file>images/pcb.png</file>
+    <file>images/eagle.png</file>
+    <file>images/cam.png</file>
+  </qresource>
+</RCC>
