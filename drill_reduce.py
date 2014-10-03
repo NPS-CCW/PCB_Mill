@@ -11,7 +11,7 @@
 #   G-code require inputs in incremets of 1 mil.
 #
 #   drill_reduce.py divides all x and y axis coordinates by 10 in
-#   order to properly import them into PSBmill
+#   order to properly import them into PCBmill
 #
 #   drill files from the eagle cam processor should be in Excellon
 #   format.  See www.excellon.com/manuals for file format details
