@@ -1,4 +1,5 @@
-#
+#! /usr/bin/env python
+
 # drill_reduce.py
 # Zac Staples
 # zhstaple(at)nps(dot)edu
@@ -6,11 +7,11 @@
 # github: https://github.com/NPS-DAZL
 #
 # Usage:
-#   drill files produces by eagle produce measurements at .1 mils.
+#   drill files produces by eagle produce measurements at .01 mils.
 #   PCBmill free software used to convert eagle cam processor into
 #   G-code require inputs in incremets of 1 mil.
 #
-#   drill_reduce.py divides all x and y axis coordinates by 10 in
+#   drill_reduce.py divides all x and y axis coordinates by 100 in
 #   order to properly import them into PSBmill
 #
 #   drill files from the eagle cam processor should be in Excellon
@@ -53,8 +54,8 @@ def process_x_line(line):   #return dict {'x', 'y'}
     str_list = line.split('Y')
     x_val = int(str_list[0].strip('X'))
     y_val = int(str_list[1])
-    x_val = x_val/10
-    y_val = y_val/10
+    x_val = x_val/100
+    y_val = y_val/100
     vals = {'x': x_val, 'y': y_val}
     return vals
 
@@ -66,7 +67,7 @@ def write_to_output(fp, line, D):
     if(D == None):
         fp.write(line)
     else:
-        output = "X"+str(D['x'])+"Y"+str(D['y'])+'\n'
+        output = "X"+str(D['x']).zfill(4)+"Y"+str(D['y']).zfill(4)+'\n'
         fp.write(output)
 
 ##############################################
@@ -81,5 +82,4 @@ for line in lines:
         D = None
 
     write_to_output(outfile, line, D)
-
 print("Drill output stored in: " + outfile_name)        
