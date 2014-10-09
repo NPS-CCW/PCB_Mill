@@ -1,3 +1,5 @@
+#! /usr/bin/env python
+
 #
 # G_final.py
 # Zac Staples

@@ -1,3 +1,5 @@
+#! /usr/bin/env python
+
 #
 # cutline.py
 # Zac Staples & Carsten Sewing
@@ -334,7 +336,7 @@ coord_system = "G55"
 
 z_travel_height = 8.0
 z_fast_stop = 3.0
-copper_depth = -.4
+copper_depth = -.6
 fr4_depth = -1.65
 final_depth = -2.0
 
