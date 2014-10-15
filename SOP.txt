@@ -7,3 +7,6 @@ A:We use three standard sizes:  #65 (0.035"), #58 (0.042"), and #44 (0.086").
 
 Q: What library do we use that has custom component tailerod for the MDX-40A mill?
 A: We use the myDevices.ldr
+
+Q: What configuration do we use when importing drill files?
+A: Zeros suppressed should NOT be checked.  Drilling method 1 and Sorting holes option 1 SHOULD be checked.
