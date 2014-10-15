@@ -54,8 +54,8 @@ def process_x_line(line):   #return dict {'x', 'y'}
     str_list = line.split('Y')
     x_val = int(str_list[0].strip('X'))
     y_val = int(str_list[1])
-    x_val = x_val/100
-    y_val = y_val/100
+    x_val = x_val/10
+    y_val = y_val/10
     vals = {'x': x_val, 'y': y_val}
     return vals
 
