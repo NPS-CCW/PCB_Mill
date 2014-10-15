@@ -1,6 +1,10 @@
 PCB Mill FAQs
+
 Q: How do I ensure that the bottom left corner of the board is at the origin?
-A: Make all layers of the board visible using the "Layer" selection menu.  Using the "Group" tool, select all elements of your board design (including documentation markings).  Once the elements are selected, type "move (>0 0) (dx dy)" into the command line, where (dx, dy) is the shift needed to bring the corner to the true origin.  Be sure to verify the needed shift by using hovering your cursor over the board corner before entering the command.
+A: Make all layers of the board visible using the "Layer" selection menu.  Using the "Group" tool, select all 
+elements of your board design (including documentation markings).  Once the elements are selected, type "move 
+(>0 0) (dx dy)" into the command line, where (dx, dy) is the shift needed to bring the corner to the true origin.  
+Be sure to verify the needed shift by using hovering your cursor over the board corner before entering the command.
 
 Q: What standard drill sizes do we use for DAZL lab PCB's?
 A:We use three standard sizes:  #65 (0.035"), #58 (0.042"), and #44 (0.086").
@@ -17,5 +21,6 @@ A: Z settings (travel height 8.0, Z down with rapid checked 3.0, Z mill depth -.
    .794mm, laser paste NOT checked).  Export options (Unit mm...very important).  Use cusom defined offsets SHOULD be 
    checked with values of x: 0 and y: 0.
    
-Q:
-A: 
+Q: What should the Drill settings be in PCBMill before exporting the drill code?
+A: Z settings (travel height 8.0, Z down with raps SHOULD be checked 3.0, Z mill depth -2.5).  Feedrates (z cut 100).
+   Export options (unit mm..very important).  Use cusom defined offsets SHOULD be checked with values of x: 0 and y: 0.
