@@ -1,3 +1,21 @@
 PCB Mill FAQs
 Q: How do I ensure that the bottom left corner of the board is at the origin?
 A: Make all layers of the board visible using the "Layer" selection menu.  Using the "Group" tool, select all elements of your board design (including documentation markings).  Once the elements are selected, type "move (>0 0) (dx dy)" into the command line, where (dx, dy) is the shift needed to bring the corner to the true origin.  Be sure to verify the needed shift by using hovering your cursor over the board corner before entering the command.
+
+Q: What standard drill sizes do we use for DAZL lab PCB's?
+A:We use three standard sizes:  #65 (0.035"), #58 (0.042"), and #44 (0.086").
+
+Q: What library do we use that has custom component tailerod for the MDX-40A mill?
+A: We use the myDevices.ldr
+
+Q: What configuration do we use when importing drill files?
+A: Zeros suppressed should NOT be checked.  Drilling method 1 and Sorting holes option 1 SHOULD be checked.
+
+Q: What should the settings panel in PCMBill say for cutting the bottom signal layer.
+A: Z settings (travel height 8.0, Z down with rapid checked 3.0, Z mill depth -.6).  Feedrates (Mill feedrate (XY) 50 for
+   .396 fluted mill.  100 for .794 fluted mill).  Arcs and circles (flatness 1).  Tool settings (diameter .396mm or 
+   .794mm, laser paste NOT checked).  Export options (Unit mm...very important).  Use cusom defined offsets SHOULD be 
+   checked with values of x: 0 and y: 0.
+   
+Q:
+A: 
