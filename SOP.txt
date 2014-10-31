@@ -24,3 +24,9 @@ A: Z settings (travel height 8.0, Z down with rapid checked 3.0, Z mill depth -.
 Q: What should the Drill settings be in PCBMill before exporting the drill code?
 A: Z settings (travel height 8.0, Z down with raps SHOULD be checked 3.0, Z mill depth -2.5).  Feedrates (z cut 100).
    Export options (unit mm..very important).  Use cusom defined offsets SHOULD be checked with values of x: 0 and y: 0.
+   
+Q: What settings should we have in the design rules (DRC)?
+A: Clearance = 16mils.  Distance = 16mils, Drill/Holes = 20mils, 
+   Sizes(Min Width) = 8mils.  Min. Drill Size = 35mils, 
+   Restring = leave default.
+   Supply Thermal isolation = 16mils
