@@ -19,3 +19,7 @@ A: Z settings (travel height 8.0, Z down with rapid checked 3.0, Z mill depth -.
    
 Q:
 A: 
+
+Notes:  When creating the .gtl file for the top layer, be sure to include the dimension layer if the copper pour on your board does not match
+up with the actual edge of your board in Eagle.  This is important, as PCBmill will readjust the origin from the one set in Eagle to the edge
+of the copper pour, which will invalidate the drill files created from the drill_G_output script.
