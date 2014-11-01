@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 #Matthew A. Porter
 #drill_G_output_lite.py
 #
@@ -100,10 +98,10 @@ def group_lines(drill_list,drill_lines):
         elif( drill_list[i] >= 0.035 and drill_list[i] < 0.042 ):
             for line in drill_lines[i]:
                 D58_lines.append(line)
-        elif( drill_list[i] >= 0.042 and drill_list[i] < 0.086 ):
+        elif( drill_list[i] >= 0.042 and drill_list[i] < 0.065 ):
             for line in drill_lines[i]:
-                D44_lines.append(line)
-        elif( drill_list[i] >= 0.086 ):
+                D58_lines.append(line)
+        elif( drill_list[i] >= 0.065 ):
             for line in drill_lines[i]:
                 D44_lines.append(line)
         i += 1
