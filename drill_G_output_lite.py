@@ -90,8 +90,9 @@ def group_lines(drill_list,drill_lines):
     grouped_lines = []
     D65_lines = []
     D58_lines = []
+    D52_lines = []
     D44_lines = []
-    ##If the drill bit size is not 0.086, 0.042 or 0.035, round to the nearest
+    ##If the drill bit size is not 0.086, 0.0625, 0.042 or 0.035, round to the nearest
     i = 0
     for bit_vals in drill_list:
         if( drill_list[i] < 0.035 ):
@@ -100,15 +101,16 @@ def group_lines(drill_list,drill_lines):
         elif( drill_list[i] >= 0.035 and drill_list[i] < 0.042 ):
             for line in drill_lines[i]:
                 D58_lines.append(line)
-        elif( drill_list[i] >= 0.042 and drill_list[i] < 0.065 ):
+        elif( drill_list[i] >= 0.042 and drill_list[i] <= 0.0625 ):
             for line in drill_lines[i]:
-                D58_lines.append(line)
-        elif( drill_list[i] >= 0.065 ):
+                D52_lines.append(line)
+        elif( drill_list[i] > 0.0625 ):
             for line in drill_lines[i]:
                 D44_lines.append(line)
         i += 1
     grouped_lines.append(D65_lines)
     grouped_lines.append(D58_lines)
+    grouped_lines.append(D52_lines)
     grouped_lines.append(D44_lines)
     print("Drill file successfully grouped into #44, #58 and #65 bit groupings!")
     return grouped_lines
@@ -158,7 +160,7 @@ output = strip_e_file() #Cut the fat from the Excellon file
 output2 = split_e_file_by_bit(output) #Divide the drill positioning elements of the Excellon file by bit
 grouped = group_lines(d_sizes,output2) #Group the divided drill list into three lists
 
-outfiles = ["65_drill.txt_int","58_drill.txt_int","44_drill.txt_int"]
+outfiles = ["65_drill.txt_int","58_drill.txt_int","52_drill.txt_int","44_drill.txt_int"]
 
 i=0
 for item in grouped:
